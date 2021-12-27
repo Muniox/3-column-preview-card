@@ -1,5 +1,37 @@
+//primary colors
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+//secondary colors
+$transparent-white: hsla(0, 0%, 100%, 0.75);
+$very-light-gray: hsl(0, 0%, 95%);
+//-------------------------------------------------------------------
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+body {
+    font-family: 'Lexend Deca';
+    width: 100vw;
+    height: 100vh;
+    background: $very-light-gray;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    font-size: 62.5%;
+}
+
+.card {
+    width: 327px;
+    border: 1px solid black
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
