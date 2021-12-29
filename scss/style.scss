@@ -15,7 +15,7 @@ $very-light-gray: hsl(0, 0%, 95%);
 body {
     font-family: 'Lexend Deca';
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background: $very-light-gray;
     display: grid;
     justify-content: center;
@@ -24,14 +24,103 @@ body {
 }
 
 .card {
-    width: 327px;
-    border: 1px solid black
+    max-width: 327px;
+    border-radius: 8px;
+    overflow: hidden;
+    color: $transparent-white;
+    margin-top: 60px;
+
+    &__component {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        min-height: 442px;
+        padding: 49px;
+
+        &--sedan {
+            background: $bright-orange;
+        }
+
+        &--suv {
+            background: $dark-cyan;
+        }
+
+        &--luxury {
+            background: $very-dark-cyan;
+        }
+    }
+
+    &__image {
+        margin-bottom: 10px;
+    }
+
+    &__component-title {
+        font-family: 'Big Shoulders Display';
+        font-size: 33px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    &__component-description {
+        font-size: 15px;
+        line-height: 22px;
+        margin-bottom: 20px;
+    }
+
+    &__component-button {
+
+        padding: 15px 36px;
+        font-weight: 700;
+        color: transparent;
+        background: $very-light-gray;
+        border-radius: 30px;
+        border: 1px solid $very-light-gray;
+        cursor: pointer;
+        transition: all 0.3s linear;
+
+        &--sedan {
+            color: $bright-orange;
+        }
+
+        &--suv {
+            color: $dark-cyan;
+        }
+
+        &--luxury {
+            color: $very-dark-cyan;
+        }
+
+    }
+    &__component-button:hover {
+        background: transparent;
+        color: $very-light-gray
+    }
 }
 
 .attribution {
     font-size: 11px;
     text-align: center;
+    margin-bottom: 60px;
   }
   .attribution a {
     color: hsl(228, 45%, 44%);
   }
+
+@media screen and (max-width: 350px) {
+    .card {
+        margin: 60px 20px 0px 20px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .card {
+        max-width: 920px;
+        min-height: 500px;
+        display: flex;
+
+        &__component {
+            width: 33.33%;
+        }
+    }
+}
