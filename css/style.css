@@ -122,13 +122,13 @@ body {
   color: #3e52a3;
 }
 
-@media screen and (max-width: 35rem) {
+@media (max-width: 21.875em) {
   .card {
     margin: 6rem 2rem 0 2rem;
   }
 }
 
-@media screen and (min-width: 50rem) {
+@media (min-width: 35.9em) {
   .card {
     max-width: 92rem;
     min-height: 50rem;
